@@ -1,7 +1,6 @@
 package com.company.libraries.item;
 
 import com.company.libraries.creator.Author;
-import com.company.libraries.generics.Generics;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,11 +43,9 @@ public abstract class aBook extends Item implements IBook{
 
 
     public void addAuthors(ArrayList<Author> authors) {
-        Generics.initList(this.authors);
        this.authors.addAll(authors);
     }
     public void addAuthor(Author author){
-        Generics.initList(this.authors);
         this.authors.add(author);
     }
 

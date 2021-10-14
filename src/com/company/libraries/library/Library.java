@@ -1,6 +1,5 @@
 package com.company.libraries.library;
 
-import com.company.libraries.generics.Generics;
 import com.company.libraries.item.*;
 
 
@@ -18,6 +17,7 @@ public  class Library {
     public Library(String name, String address){
         this.name = name;
         this.address = address;
+
     }
 
 
@@ -30,32 +30,26 @@ public  class Library {
     }
 
     public void addBooks(HashMap<String, aBook> books) {
-        Generics.initHash(this.booksByTitle);
         this.booksByTitle.putAll(books);
     }
 
     public void addBook(aBook book) {
-        Generics.initHash(this.booksByTitle);
         this.booksByTitle.put(book.getTitle(),book);
     }
 
     public void addEBooks(HashMap<String,EBook> books){
-        Generics.initHash(this.eBooksByTitle);
         this.eBooksByTitle.putAll(books);
     }
 
     public void addEBook(EBook book){
-        Generics.initHash(this.eBooksByTitle);
         this.eBooksByTitle.put(book.getTitle(),book);
     }
 
     public void addMovies(HashMap<String,Movie> movies){
-        Generics.initHash(this.moviesByTitle);
         this.moviesByTitle.putAll(movies);
     }
 
     public void addMovie(Movie movie){
-        Generics.initHash(this.moviesByTitle);
         this.moviesByTitle.put(movie.getTitle(),movie);
     }
 

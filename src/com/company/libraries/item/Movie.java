@@ -1,8 +1,8 @@
 package com.company.libraries.item;
 
 import com.company.libraries.creator.Director;
-import com.company.libraries.creator.aCreator;
-import com.company.libraries.generics.Generics;
+
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,11 +22,9 @@ public class Movie extends Item implements IMovie{
     }
 
     public void addDirector(Director director){
-        Generics.initList(this.directors);
         this.directors.add(director);
     }
     public void addDirectors(List<Director> directors){
-        Generics.initList(this.directors);
         this.directors.addAll(directors);
     }
 

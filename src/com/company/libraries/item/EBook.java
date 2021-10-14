@@ -8,7 +8,6 @@ public class EBook extends aBook{
 
     private String link;
 
-
     public EBook(long ISBN, String title, Author author, Enum type, String link) {
         super(ISBN, title, author, type);
         this.link = link;
