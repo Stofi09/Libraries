@@ -27,7 +27,7 @@ public class Author extends aCreator {
     public String toString() {
         return "Author{" +
                 "name='" + name + '\'' +
-                ", books=" + books +
+                ",and has books=" + books.size() +
                 '}';
     }
 }
