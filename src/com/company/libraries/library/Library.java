@@ -17,7 +17,7 @@ public  class Library {
     public Library(String name, String address){
         this.name = name;
         this.address = address;
-
+        initMaps();
     }
 
 
@@ -27,6 +27,12 @@ public  class Library {
 
     public String getAddress() {
         return address;
+    }
+
+    private void initMaps(){
+        this.booksByTitle = new HashMap<>();
+        this.eBooksByTitle = new HashMap<>();
+        this.moviesByTitle = new HashMap<>();
     }
 
     public void addBooks(HashMap<String, aBook> books) {
