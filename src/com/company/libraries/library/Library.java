@@ -13,6 +13,7 @@ public  class Library {
     private HashMap<String, aBook> booksByTitle;
     private HashMap<String, Movie> moviesByTitle;
     private HashMap<String, EBook> eBooksByTitle;
+    private HashMap<String, MovieForKids> movieForKidsByTitle;
 
     public Library(String name, String address){
         this.name = name;
@@ -33,6 +34,7 @@ public  class Library {
         this.booksByTitle = new HashMap<>();
         this.eBooksByTitle = new HashMap<>();
         this.moviesByTitle = new HashMap<>();
+        this.movieForKidsByTitle = new HashMap<>();
     }
 
     public void addBooks(HashMap<String, aBook> books) {
@@ -59,6 +61,14 @@ public  class Library {
         this.moviesByTitle.put(movie.getTitle(),movie);
     }
 
+    public void addMoviesForKids(HashMap<String,MovieForKids> movie){
+        this.movieForKidsByTitle.putAll(movie);
+    }
+
+    public void addMovieForKids(MovieForKids movie){
+        this.movieForKidsByTitle.put(movie.getTitle(),movie);
+    }
+
     public HashMap<String,aBook> getBooks() {
         return this.booksByTitle;
     }
@@ -68,6 +78,7 @@ public  class Library {
     public HashMap<String,Movie> getMovies() {
         return this.moviesByTitle;
     }
+    public HashMap<String, MovieForKids> getMovieForKid(){return this.movieForKidsByTitle;}
 
     /*How to reuse the check/ rent methods? .getClass???*/
     public void rentEBook(aBook book){
@@ -92,12 +103,20 @@ public  class Library {
            }
     }
     public void rentMovie(Movie movie){
-        System.out.println(movie);
         if(checkMovie(movie)){
             this.moviesByTitle.get(movie.getTitle()).borrowItem();
-            System.out.println("Here is the book: " + movie);
+            System.out.println("Here is the movie: " + movie);
         }else{
-            System.err.println("We don't have this book: " +movie.getTitle());
+            System.err.println("We don't have this movie: " +movie.getTitle());
+        }
+    }
+
+    public void rentMovie(MovieForKids movie){
+        if(checkMovie(movie)){
+            this.movieForKidsByTitle.get(movie.getTitle()).borrowItem();
+            System.out.println("Here is the kid movie: " + movie);
+        }else{
+            System.err.println("We don't have this kid book: " +movie.getTitle());
         }
     }
 
@@ -124,6 +143,13 @@ public  class Library {
             return false;
        }
    }
+    private boolean checkMovie(MovieForKids movie){
+        if(this.movieForKidsByTitle.containsKey(movie.getTitle())){
+            return true;
+        }else {
+            return false;
+        }
+    }
 
     @Override
     public String toString() {
