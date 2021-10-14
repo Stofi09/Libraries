@@ -1,0 +1,55 @@
+package com.company.libraries.item;
+
+import com.company.libraries.creator.Author;
+import com.company.libraries.generics.Generics;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public abstract class aBook extends Item implements IBook{
+
+    protected long ISBN;
+    protected List<Author> authors;
+
+
+
+    public aBook(long ISBN, String title, Author author,Enum type){
+        super();
+        this.ISBN = ISBN;
+        this.title = title;
+        this.authors = new ArrayList<>();
+        this.authors.add(author);
+        this.type = type;
+        this.isAvailable = true;
+    }
+    public aBook(long ISBN, String title,  ArrayList<Author> authors, Enum type){
+        super();
+        this.ISBN = ISBN;
+        this.title = title;
+        this.authors = new ArrayList<>(authors);
+        this.type = type;
+    }
+
+    public long getISBN() {
+        return ISBN;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public List<Author> getAuthors() {
+        return authors;
+    }
+
+
+    public void addAuthors(ArrayList<Author> authors) {
+        Generics.initList(this.authors);
+       this.authors.addAll(authors);
+    }
+    public void addAuthor(Author author){
+        Generics.initList(this.authors);
+        this.authors.add(author);
+    }
+
+}

@@ -1,23 +1,24 @@
-package com.company.libraries.author;
+package com.company.libraries.creator;
 
-import com.company.libraries.book.aBook;
+import com.company.libraries.item.aBook;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class Author extends aAuthor{
+public class Author extends aCreator {
 
-    private final String name;
-    private ArrayList<aBook> books;
+    private  String name;
+    private List<aBook> books;
 
-    public Author(String name){
-        this.name = name;
+    public Author(String name) {
+        super(name);
     }
 
     public String getName(){
         return this.name;
     }
 
-    public void setBooks(aBook book){
+    public void addBook(aBook book){
         if(books == null){
             books = new ArrayList<>();
         }
@@ -31,5 +32,4 @@ public class Author extends aAuthor{
                 ", books=" + books +
                 '}';
     }
-
 }
