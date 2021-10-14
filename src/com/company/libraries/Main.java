@@ -17,7 +17,9 @@ public class Main {
 
         // init Book
         aBook EffectiveJava = new Book(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE);
-        EBook EffectiveJavaEBook = new EBook(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE,"url");
+        EBook EffectiveJavaEBook = new EBook(134685997 ,"Effective Java Ebook", (Author) JoshuaB, BookType.SCIENCE,"url");
+
+        ((Author) JoshuaB).addBook(EffectiveJava);
 
         // init libraries
         Library EdinburghLibrary = new Library("Edinburgh","address");
@@ -29,6 +31,7 @@ public class Main {
 
         EdinburghLibrary.rentBook(EffectiveJava);
         EdinburghLibrary.rentEBook(EffectiveJavaEBook);
+        EdinburghLibrary.rentBook(EffectiveJava);
 
     }
 
