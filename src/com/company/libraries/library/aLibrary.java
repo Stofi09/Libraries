@@ -1,4 +1,4 @@
-package com.company.libraries.libraries;
+package com.company.libraries.library;
 
 public abstract class aLibrary {
 

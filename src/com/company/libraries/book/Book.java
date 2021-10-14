@@ -1,4 +1,4 @@
-package com.company.libraries.books;
+package com.company.libraries.book;
 
 import com.company.libraries.author.Author;
 

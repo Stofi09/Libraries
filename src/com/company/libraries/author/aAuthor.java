@@ -1,6 +1,6 @@
 package com.company.libraries.author;
 
-import com.company.libraries.books.aBook;
+import com.company.libraries.book.aBook;
 
 import java.util.ArrayList;
 
