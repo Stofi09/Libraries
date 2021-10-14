@@ -4,7 +4,7 @@ import com.company.libraries.item.Movie;
 
 import java.util.List;
 
-public  class Director {
+public  class Director extends aCreator{
 
     private  String name;
     private List<Movie> movies;
