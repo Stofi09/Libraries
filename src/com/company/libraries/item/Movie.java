@@ -12,12 +12,14 @@ public class Movie extends Item implements IMovie{
     private List<Director> directors;
 
     public Movie(String title, Enum type,Director director) {
-        super(title, type);
+        this.title = title;
+        this.type = type;
         this.directors = new ArrayList<>();
         this.directors.add(director);
     }
     public Movie(String title, Enum type,List<Director> director) {
-        super(title, type);
+        this.title = title;
+        this.type = type;
         this.directors = new ArrayList<>(director);
     }
 
@@ -28,9 +30,15 @@ public class Movie extends Item implements IMovie{
         this.directors.addAll(directors);
     }
 
-    private void initList() {
-        if (this.directors == null) {
-            this.directors = new ArrayList<>();
-        }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "title='" + title + '\'' +
+                ", type=" + type +
+                ", timeTakenOut=" + timeTakenOut +
+                ", isAvailable=" + isAvailable +
+                ", directors=" + directors +
+                '}';
     }
 }

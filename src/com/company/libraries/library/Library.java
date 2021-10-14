@@ -75,7 +75,7 @@ public  class Library {
             this.eBooksByTitle.get(book.getTitle()).borrowItem();
             System.out.println("Here is the book: " + book);
         }else{
-            System.out.println("We don't have this book: " +book);
+            System.err.println("We don't have this book: " +book);
         }
     }
 
@@ -88,14 +88,16 @@ public  class Library {
                    System.out.println("We have that book, but unfortunately it is not available at the moment.");
                }
            }else {
-               System.err.println("We don't have this book: " +book);
+               System.err.println("We don't have this book: " +book.getTitle());
            }
     }
     public void rentMovie(Movie movie){
+        System.out.println(movie);
         if(checkMovie(movie)){
             this.moviesByTitle.get(movie.getTitle()).borrowItem();
+            System.out.println("Here is the book: " + movie);
         }else{
-            System.out.println("We don't have this book: " +movie);
+            System.err.println("We don't have this book: " +movie.getTitle());
         }
     }
 

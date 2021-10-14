@@ -13,9 +13,7 @@ public abstract class Item {
     protected LocalDate timeTakenOut;
     protected boolean isAvailable;
 
-    public Item(String title,  Enum type){
-        this.isAvailable = true;
-    }
+
     public Item() {}
 
 
