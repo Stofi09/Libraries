@@ -82,8 +82,8 @@ public  class Library {
     public void rentBook(aBook book){
            if(checkBook(book)){
                if(this.booksByTitle.get(book.getTitle()).getAvailability()){
-                   System.out.println("Here is the book: " + book);
                    this.booksByTitle.get(book.getTitle()).borrowItem();
+                   System.out.println("Here is the book: " + book);
                } else {
                    System.out.println("We have that book, but unfortunately it is not available at the moment.");
                }
