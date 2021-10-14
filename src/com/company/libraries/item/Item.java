@@ -13,10 +13,7 @@ public abstract class Item {
     protected LocalDate timeTakenOut;
     protected boolean isAvailable;
 
-
     public Item() {}
-
-
 
 
     public void borrowItem(){
