@@ -11,7 +11,8 @@ public class Author extends aCreator {
     private List<aBook> books;
 
     public Author(String name) {
-        super(name);
+        this.name = name;
+        books = new ArrayList<>();
     }
 
     public String getName(){
@@ -19,9 +20,6 @@ public class Author extends aCreator {
     }
 
     public void addBook(aBook book){
-        if(books == null){
-            books = new ArrayList<>();
-        }
         books.add(book);
     }
 
