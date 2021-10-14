@@ -20,12 +20,12 @@ public class Main {
         aCreator MichaelB = new Director("Michael Bay");
         aCreator EricD = new Director("Eric Darnell");
 
-        // init Book
+        // init Books
         aBook EffectiveJava = new Book(134685997 ,"Effective Java", (Author) JoshuaB, BookType.SCIENCE);
         EBook EffectiveJavaEBook = new EBook(134685997 ,"Effective Java Ebook", (Author) JoshuaB, BookType.SCIENCE,"url");
         aBook Saturnine = new Book (123,"Saturnine", (Author) DanA,BookType.FICTION);
 
-        //init Movie
+        //init Movies
         Movie PearlHarbour = new Movie("Pearl Harbour", MovieType.BIOGRAPHY,(Director) MichaelB);
         Movie Armageddon = new Movie("Armageddon", MovieType.FICTION,(Director) MichaelB);
         MovieForKids Madagascar =  new MovieForKids("Madagascar", MovieType.CARTOON,(Director) EricD);
