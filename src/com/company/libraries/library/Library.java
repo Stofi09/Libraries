@@ -73,6 +73,7 @@ public  class Library {
     public void rentEBook(aBook book){
         if(checkEBook(book)){
             this.eBooksByTitle.get(book.getTitle()).borrowItem();
+            System.out.println("Here is the book: " + book);
         }else{
             System.out.println("We don't have this book: " +book);
         }
