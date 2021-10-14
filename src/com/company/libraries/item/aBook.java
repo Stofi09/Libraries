@@ -49,4 +49,15 @@ public abstract class aBook extends Item implements IBook{
         this.authors.add(author);
     }
 
+    @Override
+    public String toString() {
+        return "aBook{" +
+                "title='" + title + '\'' +
+                ", type=" + type +
+                ", timeTakenOut=" + timeTakenOut +
+                ", isAvailable=" + isAvailable +
+                ", ISBN=" + ISBN +
+                ", authors=" + authors +
+                '}';
+    }
 }
