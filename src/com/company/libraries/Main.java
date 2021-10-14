@@ -8,6 +8,11 @@ import com.company.libraries.enums.MovieType;
 import com.company.libraries.item.*;
 import com.company.libraries.library.Library;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -44,9 +49,15 @@ public class Main {
         EdinburghLibrary.addBook(EffectiveJava);
         EdinburghLibrary.addEBook(EffectiveJavaEBook);
 
+        GlasgowLibrary.addBook(EffectiveJava);
+        GlasgowLibrary.addEBook(EffectiveJavaEBook);
+
         // Add movies to the library
         EdinburghLibrary.addMovie(PearlHarbour);
         EdinburghLibrary.addMovie(Armageddon);
+
+        GlasgowLibrary.addMovie(PearlHarbour);
+        GlasgowLibrary.addMovie(Armageddon);
 
         // Rent books which are added and available
         EdinburghLibrary.rentBook(EffectiveJava);
@@ -62,8 +73,19 @@ public class Main {
         EdinburghLibrary.rentMovie(Madagascar);
         EdinburghLibrary.rentMovie(PearlHarbour);
 
+        List<Library> libraries = new ArrayList<>();
+        libraries.add(EdinburghLibrary);
+        libraries.add(GlasgowLibrary);
+
+        findBook(libraries, (Book) Saturnine);
     }
 
+    // Lookingfor books in multiple libraries
+    public static void findBook(List<Library> libraries, Book book){
+        libraries.stream().forEach(library -> {
+           library.rentBook(book);
+        });
 
+    }
 }
 
