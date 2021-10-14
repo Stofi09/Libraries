@@ -5,7 +5,7 @@ import com.company.libraries.creator.Author;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class aBook extends Item implements IBook{
+public abstract class aBook extends Item {
 
     protected long ISBN;
     protected List<Author> authors;

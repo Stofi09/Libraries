@@ -7,7 +7,7 @@ import com.company.libraries.creator.Director;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Movie extends Item implements IMovie{
+public class Movie extends Item {
 
     private List<Director> directors;
 
