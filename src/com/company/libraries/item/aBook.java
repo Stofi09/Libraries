@@ -41,14 +41,6 @@ public abstract class aBook extends Item {
         return authors;
     }
 
-
-    public void addAuthors(ArrayList<Author> authors) {
-       this.authors.addAll(authors);
-    }
-    public void addAuthor(Author author){
-        this.authors.add(author);
-    }
-
     @Override
     public String toString() {
         return "aBook{" +

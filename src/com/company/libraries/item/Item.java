@@ -13,30 +13,27 @@ public abstract class Item {
     protected LocalDate timeTakenOut;
     protected boolean isAvailable;
 
-    public Item() {}
+    protected Item() {}
 
 
     public void borrowItem(){
         this.setUnAvailable();
         this.setTime(LocalDate.now());
     }
+
     public String getTitle() {
         return title;
     }
-
     public Enum getType() {
         return type;
     }
-
     public LocalDate getTime() {
         return timeTakenOut;
     }
-
     private void setTime(LocalDate time) {
         this.timeTakenOut = time;
     }
-
-    public void setUnAvailable(){
+    protected void setUnAvailable(){
         this.isAvailable = false;
     }
     public void setAvailable(){
