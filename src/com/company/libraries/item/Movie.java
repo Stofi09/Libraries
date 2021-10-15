@@ -21,10 +21,9 @@ public class Movie extends Item {
     public void addDirector(Director director){
         this.directors.add(director);
     }
-    public void addDirectors(List<Director> directors){
-        this.directors.addAll(directors);
+    public List<Director> getDirectors(){
+        return this.directors;
     }
-
 
     @Override
     public String toString() {
