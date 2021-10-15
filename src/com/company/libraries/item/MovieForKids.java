@@ -10,7 +10,4 @@ public class MovieForKids extends Movie implements AgeAppropriate {
         super(title, type, director);
     }
 
-    public MovieForKids(String title, Enum type, List<Director> director) {
-        super(title, type, director);
-    }
 }

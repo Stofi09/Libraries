@@ -3,6 +3,7 @@ package com.company.libraries.item;
 import com.company.libraries.creator.Author;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class EBook extends aBook{
 
@@ -13,10 +14,6 @@ public class EBook extends aBook{
         this.link = link;
     }
 
-    public EBook(long ISBN, String title, ArrayList<Author> authors, Enum type, String link) {
-        super(ISBN, title, authors, type);
-        this.link = link;
-    }
 
     public String getLink() {
         return link;

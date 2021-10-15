@@ -17,11 +17,6 @@ public class Movie extends Item {
         this.directors = new ArrayList<>();
         this.directors.add(director);
     }
-    public Movie(String title, Enum type,List<Director> director) {
-        this.title = title;
-        this.type = type;
-        this.directors = new ArrayList<>(director);
-    }
 
     public void addDirector(Director director){
         this.directors.add(director);

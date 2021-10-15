@@ -9,7 +9,4 @@ public class BookForKids extends aBook implements AgeAppropriate{
         super(ISBN, title, author, type);
     }
 
-    public BookForKids(long ISBN, String title, ArrayList<Author> authors, Enum type) {
-        super(ISBN, title, authors, type);
-    }
 }

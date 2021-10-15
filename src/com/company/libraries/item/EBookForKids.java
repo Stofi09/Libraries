@@ -11,7 +11,4 @@ public class EBookForKids extends EBook implements AgeAppropriate{
         super(ISBN, title, author, type, link);
     }
 
-    public EBookForKids(long ISBN, String title, ArrayList<Author> authors, Enum type, String link) {
-        super(ISBN, title, authors, type, link);
-    }
 }

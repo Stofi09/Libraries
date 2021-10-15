@@ -103,11 +103,7 @@ public  class Library {
 
 
     private boolean checkEBook(aBook book){
-        if(this.eBooksByTitle.containsKey(book.getTitle())){
-            return true;
-        }else {
-            return false;
-        }
+        return this.eBooksByTitle.containsKey(book.getTitle());
     }
 
     private boolean checkBook(aBook book){

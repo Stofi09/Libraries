@@ -21,13 +21,6 @@ public abstract class aBook extends Item {
         this.type = type;
         this.isAvailable = true;
     }
-    public aBook(long ISBN, String title,  ArrayList<Author> authors, Enum type){
-        super();
-        this.ISBN = ISBN;
-        this.title = title;
-        this.authors = new ArrayList<>(authors);
-        this.type = type;
-    }
 
     public long getISBN() {
         return ISBN;
