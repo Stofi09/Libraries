@@ -23,6 +23,10 @@ public class Author extends aCreator {
         books.add(book);
     }
 
+    public List<aBook> getBooks(){
+        return this.books;
+    }
+
     @Override
     public String toString() {
         return "Author{" +
