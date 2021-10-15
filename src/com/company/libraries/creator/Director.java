@@ -18,6 +18,10 @@ public  class Director extends aCreator{
     public void addMovie(Movie movie){
             this.movies.add(movie);
     }
+
+    public List<Movie> getMovies(){
+        return this.movies;
+    }
     public String getName() {
         return name;
     }
