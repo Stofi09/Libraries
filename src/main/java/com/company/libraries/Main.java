@@ -16,7 +16,7 @@ import java.util.Map;
 public class Main {
 
     public static void main(String[] args) {
-
+        System.out.println("valami");
         // init Authors
         aCreator JoshuaB = new Author("Joshua Block");
         aCreator DanA = new Author("Dan Abnett");
