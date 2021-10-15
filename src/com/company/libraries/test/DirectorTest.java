@@ -1,4 +1,4 @@
-package test;
+package com.company.libraries.test;
 
 import com.company.libraries.creator.Director;
 import com.company.libraries.enums.MovieType;

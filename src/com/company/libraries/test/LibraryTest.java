@@ -1,4 +1,4 @@
-package test;
+package com.company.libraries.test;
 
 import com.company.libraries.creator.Author;
 import com.company.libraries.creator.Director;
@@ -9,9 +9,8 @@ import com.company.libraries.item.*;
 import com.company.libraries.library.Library;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
-import java.util.ArrayList;
+
 import java.util.HashMap;
-import java.util.List;
 
 public class LibraryTest {
 

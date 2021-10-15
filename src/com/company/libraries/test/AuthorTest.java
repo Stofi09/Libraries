@@ -1,12 +1,9 @@
-package test;
+package com.company.libraries.test;
 
 import com.company.libraries.creator.Author;
-import com.company.libraries.creator.Director;
 import com.company.libraries.creator.aCreator;
 import com.company.libraries.enums.BookType;
-import com.company.libraries.enums.MovieType;
 import com.company.libraries.item.Book;
-import com.company.libraries.item.Movie;
 import com.company.libraries.item.aBook;
 import org.junit.Test;
 

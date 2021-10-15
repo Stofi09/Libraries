@@ -37,34 +37,15 @@ public  class Library {
         this.movieForKidsByTitle = new HashMap<>();
     }
 
-    public void addBooks(HashMap<String, aBook> books) {
-        this.booksByTitle.putAll(books);
-    }
-
     public void addBook(aBook book) {
         this.booksByTitle.put(book.getTitle(),book);
     }
-
-    public void addEBooks(HashMap<String,EBook> books){
-        this.eBooksByTitle.putAll(books);
-    }
-
     public void addEBook(EBook book){
         this.eBooksByTitle.put(book.getTitle(),book);
     }
-
-    public void addMovies(HashMap<String,Movie> movies){
-        this.moviesByTitle.putAll(movies);
-    }
-
     public void addMovie(Movie movie){
         this.moviesByTitle.put(movie.getTitle(),movie);
     }
-
-    public void addMoviesForKids(HashMap<String,MovieForKids> movie){
-        this.movieForKidsByTitle.putAll(movie);
-    }
-
     public void addMovieForKids(MovieForKids movie){
         this.movieForKidsByTitle.put(movie.getTitle(),movie);
     }
